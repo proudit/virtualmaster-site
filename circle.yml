@@ -6,6 +6,12 @@ dependencies:
         - aws configure set region ap-northeast-1
 
 deployment:
+  production: # just a label; label names are completely up to you
     branch: master
-     commands:
-        - aws s3 sync html/ s3://virtualmaster.jp/ --delete
+    commands:
+      - aws s3 sync html/ s3://virtualmaster.jp/ --delete
+  staging:
+    branch: staging
+    commands:
+      - aws s3 sync html/ s3://st.virtualmaster.jp/ --delete
+
