@@ -7,5 +7,5 @@ dependencies:
 
 deployment:
     branch: master
-    commands:
+     commands:
         - aws s3 sync html/ s3://virtualmaster.jp/ --delete
