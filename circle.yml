@@ -6,7 +6,6 @@ dependencies:
         - aws configure set region ap-northeast-1
 
 deployment:
-    aws:
     branch: master
     commands:
         - aws s3 sync html/ s3://virtualmaster.jp/ --delete
