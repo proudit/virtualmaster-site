@@ -7,4 +7,4 @@ deployment:
     aws:
     branch: master
         commands:
-        - /bin/bash publish.sh
+        - aws s3 sync html/ s3://virtualmaster.jp/ --delete
